@@ -18,7 +18,7 @@ class AboutMethods < Neo::Koan
   # (NOTE: We are Using eval below because the example code is
   # considered to be syntactically invalid).
   def test_sometimes_missing_parentheses_are_ambiguous
-    eval "assert_equal (5, my_global_method(2, 3))" # ENABLE CHECK
+    eval "assert_equal 5, my_global_method(2, 3)" # ENABLE CHECK
     #
     # Ruby doesn't know if you mean:
     #
@@ -102,7 +102,7 @@ class AboutMethods < Neo::Koan
   end
 
   def test_calling_methods_in_same_class_with_explicit_receiver
-    asert_equal 12, self.my_method_in_the_same_class(3,4)
+    assert_equal 12, self.my_method_in_the_same_class(3,4)
   end
 
   # ------------------------------------------------------------------
